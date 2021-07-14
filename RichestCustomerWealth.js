@@ -27,5 +27,12 @@
 // Output: 17
 
 var maximumWealth = function(accounts) {
-    
+
+    let wealth = 0
+    for(let i = 0; i<accounts.length; i++){
+        if(accounts[i].reduce((accumulator, currentValue) => accumulator + currentValue)>wealth){
+            wealth = accounts[i].reduce((accumulator, currentValue) => accumulator + currentValue)
+        }
+    }
+    return wealth
 };
